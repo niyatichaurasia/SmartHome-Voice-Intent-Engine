@@ -776,14 +776,8 @@ def load_model_cached(tflite_path, encoder_path):
         le = pickle.load(f)
 
     # Try tflite-runtime first (lightweight, Streamlit Cloud compatible)
-    try:
-        import tflite_runtime.interpreter as tflite
-        interpreter = tflite.Interpreter(model_path=tflite_path)
-    except ImportError:
-        # Fallback to tensorflow.lite on local machines
-        import tensorflow as tf
-        interpreter = tf.lite.Interpreter(model_path=tflite_path)
-
+    import tensorflow as tf
+    interpreter = tf.lite.Interpreter(model_path=tflite_path)
     interpreter.allocate_tensors()
     return interpreter, le
 
