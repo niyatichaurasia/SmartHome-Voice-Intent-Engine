@@ -1,18 +1,25 @@
 # VoiceIntent — Streamlit Cloud compatible requirements
-# Uses tflite-runtime instead of tensorflow (lightweight, no CUDA deps)
 
-# Inference — lightweight TFLite runtime (no GPU, no heavy deps)
-tflite-runtime
+# FIXED: Removed tflite-runtime (not supported on Python 3.14)
+
+# Using tensorflow-cpu for TFLite inference instead
+
+# Core ML runtime (compatible with Streamlit Cloud)
+
+tensorflow-cpu==2.16.1
 
 # Audio processing
+
 librosa>=0.10.0
 soundfile>=0.12.0
 audioread
 
 # UI
+
 streamlit>=1.31.0
 
-# Data & viz
+# Data & visualization
+
 pandas>=2.0.0
 numpy>=1.24.0
 matplotlib>=3.7.0
