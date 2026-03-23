@@ -1,0 +1,19 @@
+# VoiceIntent — Streamlit Cloud compatible requirements
+# Uses tflite-runtime instead of tensorflow (lightweight, no CUDA deps)
+
+# Inference — lightweight TFLite runtime (no GPU, no heavy deps)
+tflite-runtime
+
+# Audio processing
+librosa>=0.10.0
+soundfile>=0.12.0
+audioread
+
+# UI
+streamlit>=1.31.0
+
+# Data & viz
+pandas>=2.0.0
+numpy>=1.24.0
+matplotlib>=3.7.0
+scikit-learn>=1.3.0

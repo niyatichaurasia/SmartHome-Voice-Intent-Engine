@@ -1,0 +1,26 @@
+# Dataset — never commit (license prohibits redistribution)
+data-original/
+
+# Heavy model files — use tflite instead
+models/voiceintent_cnn.keras
+models/voiceintent_robust.keras
+models/voiceintent_balanced.keras
+models/*.h5
+
+# Keep these — needed for deployment
+# models/voiceintent.tflite     ← COMMIT THIS
+# models/label_encoder.pkl      ← COMMIT THIS
+# models/global_mean.npy        ← COMMIT THIS
+# models/global_std.npy         ← COMMIT THIS
+
+# Python
+__pycache__/
+*.py[cod]
+.Python
+*.egg-info/
+venv/
+.venv/
+env/
+outputs/
+.DS_Store
+Thumbs.db
